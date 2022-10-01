@@ -1,0 +1,14 @@
+{
+    "local":{
+        "client_id": "SAMPLE_URL.apps.googleusercontent.com",
+        "client_secret": "CLIENT_SECRET",
+        "redirect_uri": "http://127.0.0.1:9922/auth_handler"
+    },
+
+
+    "heroku": {
+        "client_id": "SAMPLE_URL.apps.googleusercontent.com",
+        "client_secret": "CLIENT_SECRET",
+        "redirect_uri": "https://YOUR_HEROKU_APP_OR_SERVER_IP/auth_handler"
+    }
+}
