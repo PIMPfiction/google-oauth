@@ -3,6 +3,8 @@
 
 This server can be used as callback url in Google APIs. You can authorize google users through your API with these server. Server will redirect user to google authentication/login page. User will be prompted to confirm your app. After confirmation; Server will generate Bearer token which can be used in google apis. 
 Callback server will generate acccess token and refresh token.
+- How to create Google oauth client - https://www.youtube.com/watch?v=rUTc4Yl7-_I
+- Demo Video on Heroku - ( coming soon)
 
 ## Directly Run from Source
 
