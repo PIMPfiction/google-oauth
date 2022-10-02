@@ -6,6 +6,27 @@ Callback server will generate acccess token and refresh token.
 - How to create Google oauth client - https://www.youtube.com/watch?v=rUTc4Yl7-_I
 - Demo Video on Heroku - ( coming soon)
 
+
+## API Reference
+
+#### Main Route - Redirect Users to Google Authentication Page
+
+```http
+  GET /
+```
+
+#### Check and Refresh Token - Checks validity of access token, if it is expired it will be refreshed
+
+```http
+  GET /check_token/?token=${token}&refresh_token=${refresh_token}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `token`      | `string` | **Required**. Your Access Token (from downlaoded csv file) |
+| `refresh_token`      | `string` | **Required**.Your Refresh Token (from downlaoded csv file) |
+
+
 ## Directly Run from Source
 
 - Clone the project
@@ -16,10 +37,16 @@ Callback server will generate acccess token and refresh token.
     ```bash
     cd google-oauth
     ```
+- Edit config.json, replace client-id and client-secret. (which can be accessible from https://console.cloud.google.com/apis/credentials)
 - Configure config.json before running the server. If you have golang simply execute ⬇
     ```bash
     go run main.go
     ```
+- Note: You should add 127.0.0.1:9922/auth_handler to authorized redirect uri from google console. 
+    - Look at these screenshots. 
+        - https://prnt.sc/npKp3d-72MfT
+        - https://prnt.sc/ZZ4SxJ-GecKY
+        - https://prnt.sc/ZmZsLRjpd07q (your config should look like this)
 
 ## Deploy on Heroku (so it will be accessible by all users)
   
