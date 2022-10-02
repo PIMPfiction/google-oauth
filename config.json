@@ -1,7 +1,7 @@
 {
     "local":{
         "client_id": "SAMPLE_URL.apps.googleusercontent.com",
-        "client_secret": "CLIENT_SECRET",
+        "client_secret": "CLIENT_SECRET_CODE",
         "redirect_uri": "http://127.0.0.1:9922/auth_handler"
     },
 
